@@ -1,25 +1,21 @@
+/*
+ * GccApplication4.c
+ *
+ * Created: 11/29/2021 1:00:38 PM
+ * Author : Anuradha
+ */ 
+#define F_CPU 8000000UL
 #include <avr/io.h>
-
-#ifndef F_CPU
-#define F_CPU 8000000L
-#endif
-
 #include <util/delay.h>
-#include "driver.h"
+
 
 int main(void)
 {
-	driver_init(2, 3, 4, 5, 4, 4);
+	DDRA=0x80;
 	
-	driver_go('f', 255);
-	_delay_ms(1000);
-	driver_go('b', 255);
-	_delay_ms(1000);
-	driver_rotate('l', 255);
-	_delay_ms(1000);
-	driver_rotate('r', 255);
-	_delay_ms(1000);
-	driver_stop(1, 1);
-	
-	return 0;
+	PORTA=(1<<7);
+	_delay_ms(10000);
+	PORTA=PORTA&(~(1<<7));
+   
+    
 }
