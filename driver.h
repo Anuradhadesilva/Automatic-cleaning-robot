@@ -1,11 +1,9 @@
 /***********************************************************************
   
-            https://github.com/VinodLiyanage/GLASS-CLEANER-ROBOT
+           
   -------------------------------- (C) ---------------------------------
   
   @name driver.h
-  @version 1.0.0
-  @author Vinod Liyanage
   @description Control Motor Functionalities
 
 ************************************************************************/
