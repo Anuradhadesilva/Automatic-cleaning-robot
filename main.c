@@ -14,7 +14,7 @@ void PWM_init()
 	/*set fast PWM mode with non-inverted output*/
 	TCCR1B = (1<<WGM00) | (1<<WGM01) | (1<<COM01) | (1<<CS00);
 	TCCR1A = (1<<WGM00) | (1<<WGM01) | (1<<COM01) | (1<<CS00);
-	DDRD|=(1<<PD4);  /*set OC0 pin as output*/
+	DDRD|=(1<<PD4);  /*set OCR1B pin as output*/
 }
 
 
